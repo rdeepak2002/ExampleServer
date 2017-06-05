@@ -1,7 +1,6 @@
 package com.deepak.exampleserver.dao;
 
 import com.deepak.exampleserver.dataobject.UserDO;
-import lombok.NonNull;
 
 import java.util.List;
 import java.util.UUID;
@@ -13,15 +12,15 @@ public interface UserDAO {
 
     List<UserDO> getUsers();
 
-    List<UserDO> getUsersByFavoriteNumber(@NonNull Long favoriteNumber);
+    List<UserDO> getUsersByFavoriteNumber(Long favoriteNumber);
 
-    UserDO getUserById(@NonNull UUID id);
+    UserDO getUserById(UUID id);
 
-    List<UserDO> getUsersByName(@NonNull String name);
+    List<UserDO> getUsersByName(String name);
 
-    void createUser(@NonNull UserDO userDO);
+    void createUser(UserDO userDO);
 
-    boolean updateUser(@NonNull UserDO userDO);
+    boolean updateUser(UserDO userDO);
 
-    boolean deleteUser(@NonNull UUID id);
+    boolean deleteUser(UUID id);
 }
