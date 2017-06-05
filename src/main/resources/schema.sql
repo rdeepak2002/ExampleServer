@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS user (id TEXT PRIMARY KEY, name TEXT NOT NULL, email TEXT, favorite_number INT8, birthday INT8, date_created INT8 NOT NULL , date_updated INT8 NOT NULL)

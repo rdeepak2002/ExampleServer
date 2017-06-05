@@ -21,5 +21,9 @@ public class UserDO {
 
     private Long favoriteNumber;
 
-    private Date birthday;
+    private Long birthday;
+
+    private Long dateCreated;
+
+    private Long dateUpdated;
 }

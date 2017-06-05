@@ -33,9 +33,13 @@ dependencies {
     // end::jetty[]
     // tag::actuator[]
     compile("org.springframework.boot:spring-boot-starter-actuator")
-    compile "org.projectlombok:lombok:1.16.2"
-    compile group: 'org.xerial', name: 'sqlite-jdbc', version: '3.7.2'
+    compile("org.projectlombok:lombok:1.16.2")
+    compile("org.xerial:sqlite-jdbc:3.7.2")
     compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-starter-jdbc")
+    compile("org.springframework:spring-tx")
+    compile("com.google.guava:guava:22.0")
+    compile("org.apache.commons:commons-lang3:3.0")
     // end::actuator[]
     testCompile("junit:junit")
 }

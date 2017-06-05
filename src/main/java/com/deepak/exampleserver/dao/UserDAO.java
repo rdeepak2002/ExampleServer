@@ -11,13 +11,13 @@ import java.util.UUID;
  */
 public interface UserDAO {
 
-    List<UserDO> getAllUsers();
+    List<UserDO> getUsers();
 
-    List<UserDO> getAllUsersByFavoriteNumber(@NonNull Long favoriteNumber);
+    List<UserDO> getUsersByFavoriteNumber(@NonNull Long favoriteNumber);
 
-    UserDO readById(@NonNull UUID id);
+    UserDO getUserById(@NonNull UUID id);
 
-    UserDO readByName(@NonNull String name);
+    List<UserDO> getUsersByName(@NonNull String name);
 
     void createUser(@NonNull UserDO userDO);
 

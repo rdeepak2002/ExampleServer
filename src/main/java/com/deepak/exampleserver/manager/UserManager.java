@@ -11,17 +11,17 @@ import java.util.UUID;
  */
 public interface UserManager {
 
-    List<UserRequestResponse> getAllUsers();
+    List<UserRequestResponse> getUsers();
 
-    List<UserRequestResponse> getAllUsersByFavoriteNumber(@NonNull Long favoriteNumber);
+    List<UserRequestResponse> getUsersByFavoriteNumber(@NonNull Long favoriteNumber);
 
-    UserRequestResponse readById(@NonNull UUID id);
+    UserRequestResponse getUserById(@NonNull UUID id);
 
-    UserRequestResponse readByName(@NonNull String name);
+    List<UserRequestResponse> getUsersByName(@NonNull String name);
 
-    void createUser(@NonNull UserRequestResponse userDO);
+    void createUser(@NonNull UserRequestResponse userDTO);
 
-    boolean updateUser(@NonNull UserRequestResponse userDO);
+    boolean updateUser(@NonNull UserRequestResponse userDTO);
 
     boolean deleteUser(@NonNull UUID id);
 }

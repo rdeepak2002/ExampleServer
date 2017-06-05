@@ -1,6 +1,7 @@
 package com.deepak.exampleserver.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
@@ -12,6 +13,7 @@ import java.util.UUID;
  */
 @Data
 @Builder
+@AllArgsConstructor
 public class UserRequestResponse {
 
     @JsonProperty(value = "id")
@@ -27,5 +29,13 @@ public class UserRequestResponse {
     private Long favoriteNumber;
 
     @JsonProperty(value = "birthday")
-    private Date birthday;
+    private Long birthday;
+
+    @JsonProperty(value = "date_created")
+    private Long dateCreated;
+
+    @JsonProperty(value = "date_updated")
+    private Long dateUpdated;
+
+    public UserRequestResponse() {}
 }
